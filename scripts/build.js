@@ -47,7 +47,7 @@ const build = async (modules = []) => {
  * 主函数
  */
 const main = async () => {
-  let modules = packages.map((p) => p.value)
+  let modules = packages
   if (i || interactive) {
     const { buildModule } = await inquirer.prompt(promptList)
     modules = buildModule

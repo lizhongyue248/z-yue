@@ -8,33 +8,33 @@
     "阴历",
     "节气"
   ],
-  "author": "阿月很乖 <lizhongyue248@163.com>",
   "homepage": "https://github.com/lizhongyue248/z-yue/tree/master/packages/calendar",
-  "license": "MIT",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "directories": {
-    "test": "__tests__",
-    "lib": "src"
-  },
-  "files": [
-    "src"
-  ],
-  "publishConfig": {
-    "access": "public"
+  "bugs": {
+    "url": "https://github.com/lizhongyue248/z-yue/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/lizhongyue248/z-yue.git"
   },
+  "license": "MIT",
+  "author": "阿月很乖 <lizhongyue248@163.com>",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "test": "jest -c=../../jest.config.js --testPathPattern=__tests__ --coverageDirectory=coverage/calendar"
   },
-  "bugs": {
-    "url": "https://github.com/lizhongyue248/z-yue/issues"
-  },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "^26.6.3"
   },
-  "devDependencies": {}
+  "publishConfig": {
+    "access": "public"
+  }
 }

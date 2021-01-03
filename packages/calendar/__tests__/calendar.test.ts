@@ -1,9 +1,9 @@
-import Index from '../src'
+import Calendar from '../src'
 
 describe('@z-yue/calendar', () => {
   test('Test Success Result 2020.12.31', () => {
     // 2020.12.31 周四测试
-    const calendar = new Index(new Date(2020, 11, 31))
+    const calendar = new Calendar(new Date(2020, 11, 31))
     const chineseCalendar = calendar.chineseCalendar
     expect(calendar.year).toBe(2020)
     expect(calendar.month).toBe(12)
@@ -20,7 +20,7 @@ describe('@z-yue/calendar', () => {
   })
   test('Test Success Result 2019.02.05', () => {
     // 2019.02.05 周二测试
-    const calendar = new Index(new Date(2019, 1, 5))
+    const calendar = new Calendar(new Date(2019, 1, 5))
     const chineseCalendar = calendar.chineseCalendar
     expect(calendar.year).toBe(2019)
     expect(calendar.month).toBe(2)
@@ -37,7 +37,7 @@ describe('@z-yue/calendar', () => {
   })
   test('Test Success Result 1997.09.26', () => {
     // 1997.09.26 周五测试
-    const calendar = new Index(new Date(1997, 8, 26))
+    const calendar = new Calendar(new Date(1997, 8, 26))
     const chineseCalendar = calendar.chineseCalendar
     expect(calendar.year).toBe(1997)
     expect(calendar.month).toBe(9)
