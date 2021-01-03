@@ -1,31 +1,32 @@
+const prettierrc = require('./.prettierrc.js')
+
 module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
-  extends: ["standard", "plugin:prettier/recommended"],
-  parser: "@typescript-eslint/parser",
+  extends: [
+    'standard',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module'
   },
-  plugins: ["@typescript-eslint"],
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off'
+      }
+    }
+  ],
+  plugins: ['@typescript-eslint'],
   rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        printWidth: 120,
-        tabWidth: 2,
-        useTabs: false,
-        singleQuote: true,
-        semi: false,
-        trailingComma: "none",
-        endOfLine: "auto",
-        bracketSpacing: true,
-        jsxBracketSameLine: true,
-        parser: "flow",
-      },
-    ],
-  },
-};
+    'prettier/prettier': ['error', prettierrc]
+  }
+}
