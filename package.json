@@ -2,19 +2,29 @@
   "name": "root",
   "private": true,
   "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ],
   "author": {
     "name": "李中月",
     "email": "lizhongyue248@163.com",
     "url": "https://github.com/lizhongyue248"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "node scripts/build.js",
     "test": "jest --coverageDirectory=coverage/zhongyue",
     "test:calendar": "jest --coverageDirectory=coverage/calendar --testPathPattern=packages/calendar/__tests__",
     "update:dependency": "yarn upgrade-interactive --latest"
+  },
+  "lint-staged": {
+    "**/*.{js, ts}": [
+      "standard --fix",
+      "eslint --fix",
+      "pretty-quick --staged"
+    ],
+    "**/package.json": [
+      "sort-package-json"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -55,18 +65,10 @@
     "yargs": "^16.2.0",
     "yorkie": "^2.0.0"
   },
-  "gitHooks": {},
-  "lint-staged": {
-    "**/*.{js, ts}": [
-      "standard --fix",
-      "eslint --fix",
-      "pretty-quick --staged"
-    ],
-    "**/package.json": [
-      "sort-package-json"
-    ]
-  },
   "engines": {
     "node": ">=10.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   }
 }
