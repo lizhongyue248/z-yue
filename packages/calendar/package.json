@@ -1,11 +1,14 @@
 {
   "name": "@z-yue/calendar",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "日期节日、节气",
   "keywords": [
     "日历",
+    "阳历",
     "农历",
     "阴历",
+    "日期",
+    "节日",
     "节气"
   ],
   "homepage": "https://github.com/lizhongyue248/z-yue/tree/master/packages/calendar",
@@ -19,18 +22,19 @@
   "license": "MIT",
   "author": "阿月很乖 <lizhongyue248@163.com>",
   "main": "build/index.js",
-  "typings": "build/index.d.ts",
+  "types": "build/index.d.ts",
   "directories": {
     "lib": "src",
     "test": "__tests__"
   },
   "files": [
-    "src"
+    "build/index.d.ts",
+    "build/index.js",
+    "build/index.js.map"
   ],
   "scripts": {
     "test": "jest -c=../../jest.config.js --testPathPattern=__tests__ --coverageDirectory=coverage/calendar"
   },
-  "dependencies": {},
   "devDependencies": {
     "jest": "^26.6.3"
   },
