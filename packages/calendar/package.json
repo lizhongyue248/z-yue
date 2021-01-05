@@ -1,7 +1,7 @@
 {
   "name": "@z-yue/calendar",
-  "version": "1.1.0",
-  "description": "日期节日、节气",
+  "version": "1.2.0",
+  "description": "根据当前阳(公)历日期获取阴(农)历日期，节日",
   "keywords": [
     "日历",
     "阳历",

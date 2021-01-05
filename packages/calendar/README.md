@@ -5,11 +5,9 @@
 ## Usage
 
 ```javascript
-
 import Calendar from '@z-yue/calendar'
 const calendar = new Calendar(new Date(2020, 11, 31))
 console.log(calendar)
-
 ```
 
 ## Result
@@ -29,14 +27,14 @@ console.log(calendar)
   "isNewYear": false,
   "festival": "",
   "fullFestival": "",
-  "chineseCalendar": {
+  "lunar": {
     "now": "庚子年11月17日 0:00:00",
     "full": "庚子年冬月十七",
     "year": "庚子年",
     "month": 11,
     "date": 17,
-    "chineseMonth": "冬月",
-    "chineseDate": "十七",
+    "lunarMonth": "冬月",
+    "lunarDate": "十七",
     "isBigMonth": true,
     "isSmallMonth": false,
     "isNewYear": false,
@@ -51,38 +49,37 @@ console.log(calendar)
 
 结果参数类型 `Calendar` 阳(公)历
 
-| 参数             | 描述                   | 类型    |
-| --------------- |:---------------------:| -------:|
-|  now            | 当前时间                | Date   |
-|  year           | 当前年份                | number |
-|  month          | 当前月份                | number |
-|  date           | 当前日期                | number |
-|  day            | 周几                   | number |
-|  isTombSweeping | 清明节 🙇🏻               | boolean |
-|  isValentineDay | 清明节 🌹               | boolean |
-|  isAprilFoolDay | 愚人节 🤡               | boolean |
-|  isChristmas    | 圣诞节 🎄               | boolean |
-|  isHalloween    | 万圣节 🎃               | boolean |
-|  isNewYear      | 新年 🎉                 | boolean |
-|  festival       | 节日                    | string |
-|  fullFestival   | 节日（阳历 阴历）空格分隔   | string |
-
+| 参数           |           描述            |    类型 |
+| -------------- | :-----------------------: | ------: |
+| now            |         当前时间          |    Date |
+| year           |         当前年份          |  number |
+| month          |         当前月份          |  number |
+| date           |         当前日期          |  number |
+| day            |           周几            |  number |
+| isTombSweeping |         清明节 🙇🏻         | boolean |
+| isValentineDay |         清明节 🌹         | boolean |
+| isAprilFoolDay |         愚人节 🤡         | boolean |
+| isChristmas    |         圣诞节 🎄         | boolean |
+| isHalloween    |         万圣节 🎃         | boolean |
+| isNewYear      |          新年 🎉          | boolean |
+| festival       |           节日            |  string |
+| fullFestival   | 节日（阳历 阴历）空格分隔 |  string |
 
 结果参数类型 `ChineseCalendar` 阴(农)历
 
-| 参数             | 描述                   | 类型    |
-| --------------- |:---------------------:| -------:|
-|  now            | 当前时间                | Date   |
-|  year           | 当前阴历年份             | number |
-|  month          | 当前阴历月份             | number |
-|  date           | 当前阴历日期             | number |
-|  chineseMonth   | 当前阴历中文月份          | string |
-|  chineseDate    | 当前阴历中文日期          | string |
-|  isBigMonth     | 是否阴历大月(30天)       | boolean |
-|  isSmallMonth   | 是否阴历小月(29天)       | boolean |
-|  isNewYear      | 新年 🎉                | boolean |
-|  isLantern      | 元宵节 🥣              | boolean |
-|  isDoubleSeventh| 七夕节 🎋              | boolean |
-|  isDoubleNinth  | 重阳节 🌱              | boolean |
-|  isMidAutumn    | 中秋节 🥮              | boolean |
-|  festival       | 节日                   | string |
+| 参数            |        描述         |    类型 |
+| --------------- | :-----------------: | ------: |
+| now             |      当前时间       |    Date |
+| year            |    当前阴历年份     |  number |
+| month           |    当前阴历月份     |  number |
+| date            |    当前阴历日期     |  number |
+| lunarMonth      |  当前阴历中文月份   |  string |
+| lunarDate       |  当前阴历中文日期   |  string |
+| isBigMonth      | 是否阴历大月(30 天) | boolean |
+| isSmallMonth    | 是否阴历小月(29 天) | boolean |
+| isNewYear       |       新年 🎉       | boolean |
+| isLantern       |      元宵节 🥣      | boolean |
+| isDoubleSeventh |      七夕节 🎋      | boolean |
+| isDoubleNinth   |      重阳节 🌱      | boolean |
+| isMidAutumn     |      中秋节 🥮      | boolean |
+| festival        |        节日         |  string |

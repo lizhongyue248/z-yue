@@ -5,5 +5,6 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)?$',
   collectCoverage: true,
   collectCoverageFrom: ['packages/**/*.{js,ts}', '!**/node_modules/**'],
-  cacheDirectory: 'cache'
+  cacheDirectory: 'cache',
+  coveragePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/']
 }
