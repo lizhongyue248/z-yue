@@ -1,6 +1,6 @@
 {
   "name": "@z-yue/calendar",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "根据当前阳(公)历日期获取阴(农)历日期，节日",
   "keywords": [
     "日历",
@@ -28,9 +28,7 @@
     "test": "__tests__"
   },
   "files": [
-    "build/index.d.ts",
-    "build/index.js",
-    "build/index.js.map"
+    "build/*"
   ],
   "scripts": {
     "test": "jest -c=../../jest.config.js --testPathPattern=__tests__ --coverageDirectory=coverage/calendar"
