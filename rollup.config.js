@@ -25,14 +25,12 @@ const buildJS = (input) => ({
   external: ['react'],
   output: [
     {
-      format: 'esm',
-      file: pkg.module,
-      exports: 'named'
+      format: 'es',
+      file: pkg.module
     },
     {
       format: 'cjs',
       file: pkg.main,
-      exports: 'named',
       plugins: [terser()],
       sourcemap: true
     }
