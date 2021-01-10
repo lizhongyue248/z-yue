@@ -1,6 +1,6 @@
 {
   "name": "@z-yue/calendar",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "根据当前阳(公)历日期获取阴(农)历日期，节日",
   "keywords": [
     "日历",
@@ -20,9 +20,14 @@
     "url": "https://github.com/lizhongyue248/z-yue.git"
   },
   "license": "MIT",
-  "author": "阿月很乖 <lizhongyue248@163.com>",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "author": {
+    "name": "阿月很乖",
+    "email": "lizhongyue248@163.com",
+    "url": "https://github.com/lizhongyue248"
+  },
+  "main": "build/cjs/index.min.js",
+  "module": "build/esm/index.js",
+  "types": "build/types/index.d.ts",
   "directories": {
     "lib": "src",
     "test": "__tests__"
@@ -31,6 +36,7 @@
     "build/*"
   ],
   "scripts": {
+    "build": "cross-env INPUT=./src/index.ts rollup -c ../../rollup.config.js",
     "test": "jest -c=../../jest.config.js --testPathPattern=__tests__ --coverageDirectory=coverage/calendar"
   },
   "devDependencies": {

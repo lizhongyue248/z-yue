@@ -6,8 +6,6 @@
     "jsx": "preserve",
     "declaration": true,
     "sourceMap": true,
-    "sourceRoot": "**/src",
-    "outDir": "build",
     "removeComments": true,
     "strict": true,
     "noImplicitAny": true,
@@ -30,17 +28,9 @@
     "experimentalDecorators": true,
     "suppressImplicitAnyIndexErrors": true,
     "paths": {
-      "@z-yue/calendar": ["./packages/calendar/lib/index.tsx"]
+      "@z-yue/*": ["*/src/index"]
     }
   },
-  "include": [
-    "**/src/**/*",
-    "**/docs/**/*",
-    "scripts/**/*",
-    "**/demos"
-  ],
-  "exclude": [
-    "**/(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)?$",
-    "build"
-  ]
+  "include": ["**/src/**/*", "**/docs/**/*", "**/demos"],
+  "exclude": ["**/(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)?$", "build", "scripts/**.mjs"]
 }
